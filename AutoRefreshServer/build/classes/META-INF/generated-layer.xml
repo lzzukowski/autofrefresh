@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE filesystem PUBLIC "-//NetBeans//DTD Filesystem 1.2//EN"
+                            "http://www.netbeans.org/dtds/filesystem-1_2.dtd">
+<filesystem>
+    <folder name="Editors">
+        <folder name="OnSave">
+            <file name="pl-zz-refresh-RefreshSaveTask$SaveTaskFactory.instance">
+                <!--pl.zz.refresh.RefreshSaveTask.SaveTaskFactory-->
+                <attr intvalue="1500" name="position"/>
+                <attr name="instanceOf" stringvalue="org.netbeans.spi.editor.document.OnSaveTask$Factory"/>
+            </file>
+        </folder>
+    </folder>
+    <folder name="Actions">
+        <folder name="Bugtracking">
+            <file name="pl-zz-refresh-RefreshBrowsers.instance">
+                <!--pl.zz.refresh.RefreshBrowsers-->
+                <attr
+                    bundlevalue="pl.zz.refresh.Bundle#CTL_RefreshBrowsers" name="displayName"/>
+                <attr
+                    methodvalue="org.openide.awt.Actions.alwaysEnabled" name="instanceCreate"/>
+                <attr name="delegate" newvalue="pl.zz.refresh.RefreshBrowsers"/>
+                <attr boolvalue="false" name="noIconInMenu"/>
+            </file>
+        </folder>
+    </folder>
+    <folder name="Menu">
+        <folder name="RunProject">
+            <file name="pl-zz-refresh-RefreshBrowsers.shadow">
+                <!--pl.zz.refresh.RefreshBrowsers-->
+                <attr name="originalFile" stringvalue="Actions/Bugtracking/pl-zz-refresh-RefreshBrowsers.instance"/>
+                <attr intvalue="100" name="position"/>
+            </file>
+            <file name="pl-zz-refresh-RefreshBrowsers-separatorBefore.instance">
+                <!--pl.zz.refresh.RefreshBrowsers-->
+                <attr name="instanceCreate" newvalue="javax.swing.JSeparator"/>
+                <attr intvalue="50" name="position"/>
+            </file>
+        </folder>
+    </folder>
+    <folder name="Shortcuts">
+        <file name="A-D.shadow">
+            <!--pl.zz.refresh.RefreshBrowsers-->
+            <attr name="originalFile" stringvalue="Actions/Bugtracking/pl-zz-refresh-RefreshBrowsers.instance"/>
+        </file>
+    </folder>
+    <folder name="OptionsDialog">
+        <folder name="Editor">
+            <file name="pl-zz-refresh-AutoRefreshOptionsPanelController.instance">
+                <!--pl.zz.refresh.AutoRefreshOptionsPanelController-->
+                <attr
+                    methodvalue="org.netbeans.spi.options.AdvancedOption.createSubCategory" name="instanceCreate"/>
+                <attr name="controller" newvalue="pl.zz.refresh.AutoRefreshOptionsPanelController"/>
+                <attr
+                    bundlevalue="pl.zz.refresh.Bundle#AdvancedOption_DisplayName_AutoRefresh" name="displayName"/>
+                <attr
+                    bundlevalue="pl.zz.refresh.Bundle#AdvancedOption_Keywords_AutoRefresh" name="keywords"/>
+                <attr name="keywordsCategory" stringvalue="Editor/AutoRefresh"/>
+            </file>
+        </folder>
+    </folder>
+</filesystem>
